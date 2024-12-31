@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import Global from './styles/global'
-import Naavbar from './components/Navbar'
+// import Navbar from './components/Navbar'
+import Home from './Pages/Home'
 function App() {
 
   return (
     <>
       <div>
       <Global />
-      <Naavbar/>
+      <Home />
       </div>
      
     </>

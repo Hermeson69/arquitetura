@@ -1,23 +1,14 @@
 import React, { Fragment } from "react";
-import { Container, Desc_Logo, Logo, Nav, NavItem, User, BurgerMenu } from "./style";
+import { Acount, Container, Desc_Logo, Logo, NavContainer, NavItem} from "./style";
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    // const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
+    // const toggleMenu = () => {
+    //     setIsOpen(!isOpen);
+    // };
     return (
         <Container>
-            <BurgerMenu>
-                <i className="fas fa-bars"></i>
-                <Nav>
-                    <NavItem>Home</NavItem>
-                    <NavItem>Services</NavItem>
-                    <NavItem>Products</NavItem>
-                    <NavItem>Contact</NavItem>
-                </Nav>
-            </BurgerMenu>
             <Logo>
                 <img src="../../../OIP.jpeg" alt="" />
                 <i></i>
@@ -27,10 +18,19 @@ const Navbar = () => {
                     <span>NAE - Núcleo de Assistencia Estudantil</span>
                 </Desc_Logo>
             </Logo>
-            <User>
-                <img src="" alt="" />
-                <span>E-mail</span>
-            </User>
+            <NavContainer>
+                <ul>
+                <NavItem><a href="">Home</a></NavItem>
+                <NavItem><a href="">Serviços</a></NavItem>
+                <NavItem><a href="">Bolsas</a></NavItem>
+                <NavItem><a href="">Palestras</a></NavItem>
+                <NavItem><a href="">Editais</a></NavItem>
+                </ul>
+            </NavContainer>
+
+            <Acount>
+                <a href="">Login</a>/<a href="">Notificações</a>
+            </Acount>
         </Container>
     );
 }
